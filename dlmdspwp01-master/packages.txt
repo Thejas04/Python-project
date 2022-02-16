@@ -1,0 +1,3 @@
+SQLAlchemy==1.4.22
+jupyter==1.0.0
+pandas==1.3.1
