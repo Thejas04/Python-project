@@ -1,4 +1,6 @@
 # import libraries
+import unittest
+from matplotlib import collections
 import pandas as pd
 import os
 from math import sqrt
@@ -89,6 +91,7 @@ class best_function(object):
         
         # final result is stored here
         df_result = pd.DataFrame(list(zip(self.deviation, self.best_func)), columns=['Deviation', 'Ideal function'])
+       
         df_result['x'] = self.df_test['x']
         df_result['y'] = self.df_test['y']
         return df_result
@@ -189,7 +192,7 @@ x_mean = obj.ideal_function()
 df_result = obj.test_function(x_mean)
 
 # prints first five sample of the obtained result
-print(df_result.head())
+print(df_result)
 
 # visualization
 obj.visualizations()
@@ -197,3 +200,13 @@ obj.visualizations()
 # push csv data to db
 sess = define_session()
 load_csv_dataset(sess)
+
+
+
+
+
+
+
+
+
+
